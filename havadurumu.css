@@ -1,24 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background: #e0f7fa; /* Açık mod - orijinal */
+    background: #e0f7fa; 
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    padding: 20px; /* Küçük ekranlar için kenar boşluğu */
+    padding: 20px;
     box-sizing: border-box;
     transition: background 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-    background: #2c3e50; /* Koyu tema - en dış arka plan */
-    color: #ecf0f1; /* Koyu tema - genel yazı rengi */
+    background: #2c3e50; 
+    color: #ecf0f1;
 }
 
 .container {
     text-align: center;
-    background: white; /* Açık mod - orijinal */
+    background: white;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -28,19 +28,18 @@ body.dark-mode {
 }
 
 body.dark-mode .container {
-    background: #3A4B5C; /* Koyu tema - container arka planı */
+    background: #3A4B5C; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Çocukları dikeyde mükemmel şekilde ortalar */
-    margin-bottom: 20px; /* Header ile altındaki input arasında boşluk */
-    gap: 8px; /* Header içindeki elemanlar arası boşluk */
+    align-items: center; 
+    margin-bottom: 20px; 
+    gap: 8px; 
 }
 
-/* Header içindeki select ve button için ortak yükseklik ve temel stil */
 .header #citySelect,
 .header #languageSelect,
 .header #modeButton {
@@ -52,7 +51,7 @@ body.dark-mode .container {
     align-items: center;
     font-size: 15px;
 }
-/* Header select elemanlarına özel stiller (citySelect ve languageSelect) */
+
 .header #citySelect,
 .header #languageSelect {
     padding: 0 10px;
@@ -70,44 +69,39 @@ body.dark-mode .header #languageSelect {
 
 
 #citySelect {
-    flex-grow: 1; /* Mevcut alanı doldurması için */
+    flex-grow: 1; 
 }
 
-.language-mode { /* Bu div, dil seçimi ve mod butonunu gruplar */
+.language-mode {
     display: flex;
     align-items: center;
-    gap: 8px; /* Dil seçimi ve mod butonu arasında boşluk */
+    gap: 8px; 
 }
 
 #languageSelect {
-    min-width: 100px; /* "Türkçe" veya "English" sığması için minimum genişlik */
+    min-width: 100px; 
 }
 
 #modeButton {
-    width: 44px; /* Yükseklikle aynı, kare bir buton için */
-    padding: 0; /* İçerik (ikon) tam ortalanacak */
-    justify-content: center; /* İçindeki ikonu yatay ortala */
+    width: 44px; 
+    padding: 0; 
+    justify-content: center; 
     border: 1px solid #ccc;
     background-color: #f0f0f0;
     cursor: pointer;
 }
 
 body.dark-mode #modeButton {
-    background-color: #5A6B7A; /* Koyu tema - buton arka planı */
-    border-color: #7F8C8D; /* Koyu tema - buton border */
+    background-color: #5A6B7A; 
+    border-color: #7F8C8D; 
 }
 
-#modeButton img { /* Orijinal HTML'deki gibi img kullanıyorsanız */
+#modeButton img {
     width: 24px;
     height: 24px;
     display: block;
 }
-/* JavaScript ile emoji (☀️/🌙) kullanıyorsanız, img yerine text rengi: */
-/* body.dark-mode #modeButton { color: #FFD700; } */
-/* body:not(.dark-mode) #modeButton { color: #4A4A4A; } */
 
-
-/* Şehir giriş input'u için temel stiller (Açık Mod) */
 #cityInput {
     padding: 10px 12px;
     width: 100%;
@@ -117,25 +111,22 @@ body.dark-mode #modeButton {
     font-size: 16px;
     height: 44px;
     margin-bottom: 20px;
-    background-color: #ffffff; /* Açık modda beyaz arka plan */
-    color: #333333;        /* Açık modda koyu yazı rengi */
+    background-color: #ffffff; 
+    color: #333333;       
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
-/* Şehir giriş input'u için KOYU MOD stilleri */
+
 body.dark-mode #cityInput {
-    background-color: #566573; /* Koyu tema için uygun bir arka plan rengi (select'lere benzer) */
-    color: #ecf0f1;            /* Koyu temada AÇIK renkli yazı */
-    border: 1px solid #78909c;   /* Koyu tema için uygun bir border rengi */
+    background-color: #566573; 
+    color: #ecf0f1;            
+    border: 1px solid #78909c;   
 }
-/* Input placeholder stilleri */
 #cityInput::placeholder {
-    color: #a0a0a0; /* Açık modda placeholder rengi */
-    opacity: 1; /* Firefox için */
+    color: #a0a0a0;
+    opacity: 1; 
   }
   
-
-/* "Hava Durumunu Getir" butonu */
 #getWeatherButton {
     padding: 10px 20px;
     height: 44px;
@@ -150,13 +141,13 @@ body.dark-mode #cityInput {
     cursor: pointer;
     transition: background 0.3s, transform 0.1s;
     font-size: 16px;
-    font-weight: normal; /* Resimdeki gibi daha ince */
+    font-weight: normal;
     width: auto;
-    margin: 0 auto 20px auto; /* Ortalamak ve alt boşluk */
+    margin: 0 auto 20px auto; 
 }
 
 body.dark-mode #getWeatherButton {
-    background: #03A9F4; /* Koyu temada biraz daha canlı bir mavi */
+    background: #03A9F4; 
 }
 
 #getWeatherButton:hover {
@@ -168,7 +159,6 @@ body.dark-mode #getWeatherButton {
     transform: translateY(0px);
 }
 
-/* Hava durumu sonuç kutusu */
 #weatherResult {
     margin-top: 20px;
     font-size: 17px;
@@ -177,28 +167,28 @@ body.dark-mode #getWeatherButton {
     border: 1px solid #ddd;
     border-radius: 8px;
     background: #f9f9f9;
-    min-height: 150px; /* Yükleniyor mesajı için yer */
-    display: none; /* Başlangıçta görünmez */
+    min-height: 150px; 
+    display: none; 
     transition: background 0.3s, border-color 0.3s;
 }
 
 body.dark-mode #weatherResult {
-    background: #4a6378; /* Koyu mod sonuç kutusu arka planı */
-    border-color: #566573; /* Koyu mod sonuç kutusu border */
+    background: #4a6378; 
+    border-color: #566573; 
 }
 
 #weatherResult.active {
-    display: block; /* Veriler geldiğinde görünür */
+    display: block; 
 }
 
 #weatherResult h2 {
     margin-top: 0;
-    color: #0277bd; /* Başlık rengi açık mod */
+    color: #0277bd; 
     font-size: 24px;
 }
 
 body.dark-mode #weatherResult h2 {
-    color: #82c9ff; /* Başlık rengi koyu mod */
+    color: #82c9ff; 
 }
 
 #weatherResult p {
@@ -209,11 +199,11 @@ body.dark-mode #weatherResult h2 {
 #weatherResult .weather-icon {
     width: 60px;
     height: 60px;
-    float: right; /* İkonu sağa yasla */
+    float: right;
     margin-left: 10px;
-    margin-top: -5px; /* Başlıkla daha iyi hizalanması için ince ayar (isteğe bağlı) */
+    margin-top: -5px; 
 }
 body.dark-mode #cityInput::placeholder {
-    color: #bdc3c7; /* Koyu arka plan üzerinde görünecek AÇIK renkli placeholder */
-    opacity: 1; /* Firefox için */
+    color: #bdc3c7; 
+    opacity: 1; 
   }
